@@ -23,6 +23,8 @@ class Rectangle
 	double getWidth() const;
 	double getLength() const;
 	double getArea() const;
+	double getPerimeter() const;
+	double getVolume() const;
 	
 };
 
@@ -76,6 +78,19 @@ double Rectangle::getArea() const
 	return width * length;
 }
 
+// getPerimeter value, perimeter, capaiche?
+double Rectangle::getPerimeter() const
+{
+	return (2*width)+(2*length);
+}
+
+// getVolume gets the volume of the numbers inputted.
+// The constant value of height is 8.
+double Rectangle::getVolume() const
+{
+	return length*width*8;
+}
+
 //===================================================================
 // START OF MAIN FUNCTION                                           =
 //===================================================================
@@ -110,6 +125,8 @@ int main ()
 	cout << "Width: " << box.getWidth() << endl;
 	cout << "Length: " << box.getLength() << endl;
 	cout << "Area: " << box.getArea() << endl;
+	cout << "Perimeter: " << box.getPerimeter() << endl;
+	cout << "Volume: " << box.getVolume() << endl;
 	
 	// end the program
 	return 0;
