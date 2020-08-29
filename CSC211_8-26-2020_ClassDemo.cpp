@@ -26,7 +26,13 @@ class Rectangle
 	
 };
 
+//=====================================================
+// DEFINING FUNCTIONS                                 =
+//=====================================================
+
 // setWidth assigns a value to the width member.
+// setWidth in here is w, which is doubled to allow for
+// Decimal inputs. whatever setWidth is, w will be as well.
 
 void Rectangle::setWidth(double w)
 {
@@ -34,6 +40,14 @@ void Rectangle::setWidth(double w)
 }
 
 // setLength assigns a value to the length number.
+// Same thing in setLength as there is in setWidth
+// setLength is actually l, doubled to allow for decimal input.
+// length is l, and l is setLength. so:
+
+// rectLength --> setLength --> l --> length --> area (length times width)
+// rectWidth  --> setWidth  --> w --> width  --> area (length times width)
+
+// Confusing? Probably but it'll probably be easier later (maybe.)
 
 void Rectangle::setLength(double l)
 {
@@ -58,6 +72,7 @@ double Rectangle::getLength() const
 
 double Rectangle::getArea() const
 {
+	// Area is width times length, if I didn't know this already, i shouldn't be here.
 	return width * length;
 }
 
@@ -68,6 +83,9 @@ double Rectangle::getArea() const
 int main ()
 {
 	// Define an instance of the rectangle class
+	
+	// This makes the rectangle class be read as box, 
+	// so we can run a number through the rectangle class above us.
 	Rectangle box;
 	// Local var for width
 	double rectWidth;
